@@ -1,0 +1,18 @@
+@font-face {
+  src: url(./fomts/SourceSansPro/SourceSansPro-Light.ttf) format("truetype");
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  src: url(fomts/SourceSansPro/SourceSansPro-Regular.ttf) format("truetype");
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  src: url(fomts/SourceSansPro/SourceSansPro-Black.ttf) format("truetype");
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 900;
+}/*# sourceMappingURL=font.css.map */

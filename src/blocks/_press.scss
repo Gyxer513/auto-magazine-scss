@@ -1,0 +1,63 @@
+.press {
+  min-width: $desctop;
+  height: 499px;
+  border-bottom: 1px solid $textColor;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 46px;
+    margin: 50px 0 0 50px;
+  }
+  &__link-box {
+    border-left: 1px solid $textColor;
+    min-width: 719px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 42px;
+    max-width: 619px;
+    margin: 50px 0 0 50px;
+    text-decoration: none;
+    color: $textColor;
+  }
+  &__button {
+    width: 110px;;
+    height: 52px;
+    border: 1px solid #e1fd2c;
+    background-color: transparent;
+    color: $textColor;
+    margin: 0 50px 50px 0;
+    border-radius: 180px;
+  }
+  &__button:hover {
+    cursor: pointer;
+    background-color: $textColor;
+    color: $primaryColor;
+  }
+  &__link-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__checkbox-container {
+    margin: 0 0 50px 50px;
+    display: flex;
+    align-items: flex-end;
+  }
+  &__checkbox {
+    border: 1px solid #e1fd2c;
+    color: $textColor;
+    border-radius: 10%;
+    width: 1em;
+    height: 1em;
+    background-color: transparent;
+    margin: 0 5px 0;
+    padding: 0;
+  }
+}

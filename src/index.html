@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto-magazine</title>
+  </head>
+  <body class="page">
+    <!-- ******************** HEADER ******************** -->
+    <header class="header">
+      <nav class="header__navigation">
+        <a class="header__link">ФАКТЫ</a>
+        <a class="header__link">ГАЛЕРЕЯ</a>
+        <a class="header__link">ПРЕССА</a>
+      </nav>
+      <img
+        class="header__logo"
+        src="<%=require('./images/AUTO-MAGAZINE.svg')%>"
+        alt="logo"
+      />
+    </header>
+    <main class="main">
+      <section class="intro">
+        <div class="intro__info">
+          <p class="intro__name">VOLKSWAGEN T1</p>
+          <h1 class="intro__title">Новая версия популярного микроавтобуса</h1>
+          <p class="intro__signature">с электродвигателем</p>
+          <button class="intro__button">подробнее</button>
+        </div>
+        <img
+          class="intro__image"
+          src="<%=require('./images/Rectangle.svg')%>"
+          alt=""
+        />
+      </section>
+      <section class="about">
+        <p class="about__text">
+          <span class="about__text_bold">VW T1 Electro:</span> Отделение
+          Volkswagen Commercial Vehicles представило концепт e-Bulli:
+          классический вэн T1 1966 года с электрической силовой установкой. По
+          словам производителя, проект получит коммерческое продолжение, и через
+          фирму-партнера eClassics наборы для конверсии микроавтобусов в
+          электрокары и уже готовые машины будут продавать частным клиентам.
+        </p>
+        <div class="about__characteristics">
+          <h2 class="about__title">минусы</h2>
+          <ul>
+            <li class="about__advantage">Экологичный</li>
+            <li class="about__advantage">Экономный</li>
+            <li class="about__advantage">Тихий</li>
+          </ul>
+        </div>
+        <div class="about__characteristics">
+          <h2 class="about__title">плюсы</h2>
+          <ul>
+            <li class="about__disadvantage">Дорогой</li>
+            <li class="about__disadvantage">Подзарядка</li>
+          </ul>
+        </div>
+      </section>
+      <section class="gallary">
+        <div class="gallary__box">
+          <img
+            class="gallary__image"
+            src="<%=require('./images/Rectangle1.svg')%>"
+            alt="Картинка"
+          />
+          <div class="gallary__components">
+            <h3 class="gallary__title">Галлерея</h3>
+            <div>
+              <button class="gallary__button">
+                <img src="<%=require('./images/arrow-left.svg')%>" alt="" />
+              </button>
+              <button class="gallary__button">
+                <img src="<%=require('./images/arrow-right.svg')%>" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="press">
+        <h3 class="press__title">Пресса</h3>
+        <div class="press__link-box">
+          <a class="press__link" href="#">Engadget: VW’s e-BULLI concept shows how your classic van can become an EV.</a>
+          <div class="press__link-container">
+            <div class="press__checkbox-container">
+              <input class="press__checkbox" type="radio">
+              <input class="press__checkbox" type="radio">
+            </div>
+            <button class="press__button">Читать</button>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer__signature"></div>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+.header {
+  min-width: 1440px;
+  height: 70px;
+  border-bottom: 1px solid $textColor;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  background-color: $primaryColor;
+
+  &__logo {
+    width: 184px;
+    height: 38px;
+    align-self: center;
+    margin-right: calc(720px - 92px);
+  }
+
+  &__link {
+    margin: 0 20px 0 0;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  &__link:nth-last-child(1) {
+    margin: 0;
+  }
+
+  &__link:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+  &__navigation {
+    margin: 27px 0 27px 50px;
+  }
+}

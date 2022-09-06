@@ -1,0 +1,8 @@
+.footer {
+  min-height: 316px;
+  &__signature {
+    max-width: 719px;
+    border-right: 1px solid $textColor;
+    min-height: 316px;
+  }
+}

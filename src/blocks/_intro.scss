@@ -1,0 +1,41 @@
+.intro {
+  display: flex;
+  min-height: 840px;
+  border-bottom: 1px solid $textColor;
+  justify-content: space-between;
+  &__name {
+    font-size: 19px;
+    line-height: 28px;
+  }
+  &__button {
+    width: 360px;
+    height: 64px;
+    border: 1px solid $textColor;
+    background-color: transparent;
+    font-size: 15px;
+    line-height: 60px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $textColor;
+  }
+  &__button:hover {
+    cursor: pointer;
+    background-color: $textColor;
+    color: $primaryColor;
+  }
+  &__info {
+    max-width: 550px;
+    text-align: center;
+    margin: 180px 0 0 80px;
+  }
+  &__title {
+    font-size: 65px;
+    line-height: 73px;
+    font-weight: 400;
+  }
+  &__signature {
+    font-size: 19px;
+    line-height: 28px;
+    text-transform: uppercase;
+  }
+}
