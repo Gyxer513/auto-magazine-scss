@@ -1,8 +1,49 @@
 .footer {
+  display: flex;
   min-height: 316px;
+  justify-content: space-between;
   &__signature {
-    max-width: 719px;
-    border-right: 1px solid $textColor;
     min-height: 316px;
   }
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-left: 1px solid $textColor;
+    min-width: 719px;
+  }
+  &__logo {
+    width: 184px;
+    height: 38px;
+    margin: 50px 50px 0 0;
+  }
+  &__copyright {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    margin: 0 50px 50px 0;
+  }
+&__name-input {
+  margin: 0;
+  background-color: $primaryColor;
+  border: 1px solid $textColor;
+  width: 560px;
+  height: 111px;
+}
+&__mail {
+  margin: 0;
+  background-color: $primaryColor;
+  border: 1px solid $textColor;
+  width: 560px;
+  height: 132px;
+}
+&__discribe {
+  margin: 0;
+  background-color: $textColor;
+  color: $primaryColor;
+  border: 2px solid $textColor;
+  width: 80px;
+  height: 132px;
+}
 }
