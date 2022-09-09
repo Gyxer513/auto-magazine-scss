@@ -2,9 +2,41 @@
   display: flex;
   min-height: 316px;
   justify-content: space-between;
-  &__signature {
-    min-height: 316px;
+  &__title {
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 46px;
+    margin: 50px 0 16px 0;
   }
+  &__input-border {
+    border-right: 1px solid $textColor;
+  }
+  &__signature-box {
+    padding-left: 50px;
+  }
+
+  &__signature {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+  }
+
+  &__input-name-box {
+    border: 1px solid $textColor;
+    width: 338px;
+    height: 32px;
+    display: flex;
+  }
+
+  &__input-mail-box {
+    border: 1px solid $textColor;
+    border-top: none;
+    width: 338px;
+    height: 32px;
+    display: flex;
+    margin: 0 0 50px 0;
+  }
+
   &__contact {
     display: flex;
     flex-direction: column;
@@ -24,26 +56,26 @@
     line-height: 13px;
     margin: 0 50px 50px 0;
   }
-&__name-input {
-  margin: 0;
-  background-color: $primaryColor;
-  border: 1px solid $textColor;
-  width: 560px;
-  height: 111px;
-}
-&__mail {
-  margin: 0;
-  background-color: $primaryColor;
-  border: 1px solid $textColor;
-  width: 560px;
-  height: 132px;
-}
-&__discribe {
-  margin: 0;
-  background-color: $textColor;
-  color: $primaryColor;
-  border: 2px solid $textColor;
-  width: 80px;
-  height: 132px;
-}
+  &__name-input {
+    margin: 0;
+    background-color: $primaryColor;
+    border: none;
+    max-width: 177px;
+    height: 90%;
+  }
+  &__mail {
+    margin: 0;
+    background-color: $primaryColor;
+    border: none;
+    width: 560px;
+    height: auto;
+  }
+  &__button-subscribe {
+    margin: 0;
+    background-color: $textColor;
+    color: $primaryColor;
+    border: 2px solid $textColor;
+    width: 80px;
+    height: 100%;
+  }
 }

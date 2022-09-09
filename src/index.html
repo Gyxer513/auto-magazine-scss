@@ -30,7 +30,7 @@
         </div>
         <img
           class="intro__image"
-          src="<%=require('./images/Rectangle.svg')%>"
+          src="<%=require('./images/MainPic.svg')%>"
           alt=""
         />
       </section>
@@ -62,17 +62,30 @@
       <section class="gallary">
         <div class="gallary__box">
           <img
+            id="firstImage"
+            class="gallary__image gallary__image_visible"
+            src="<%=require('./images/Slaider-pic1.svg')%>"
+            alt="Картинка"
+          />
+          <img
+            id="secondImage"
             class="gallary__image"
-            src="<%=require('./images/Rectangle1.svg')%>"
+            src="<%=require('./images/Slaider-pic2.svg')%>"
+            alt="Картинка"
+          />
+          <img
+            id="thirdImage"
+            class="gallary__image"
+            src="<%=require('./images/Slaider-pic3.svg')%>"
             alt="Картинка"
           />
           <div class="gallary__components">
             <h3 class="gallary__title">Галлерея</h3>
             <div>
-              <button class="gallary__button">
+              <button id="buttonLeft" class="gallary__button">
                 <img src="<%=require('./images/arrow-left.svg')%>" alt="" />
               </button>
-              <button class="gallary__button">
+              <button id="buttonRight" class="gallary__button">
                 <img src="<%=require('./images/arrow-right.svg')%>" alt="" />
               </button>
             </div>
@@ -98,24 +111,26 @@
       <footer class="footer">
         <div class="footer__signature-box">
           <h4 class="footer__title">Подписка</h4>
-          <p class="footer__signature"></p>
+          <p class="footer__signature">На новые спецвыпуски машин.</p>
           <div class="footer__input-name-box">
-            <input class="footer__name-input" type="text" />
+            <div class="footer__input-border">
+              <input class="footer__name-input" type="text" />
+            </div>
             <input class="footer__name-input" type="text" />
           </div>
           <div class="footer__input-mail-box">
             <input class="footer__mail" type="email" />
-            <button class="footer__discribe">Подписка</button>
+            <button class="footer__button-subscribe">Подписка</button>
           </div>
         </div>
-        <!-- <div class="footer__contact">
+        <div class="footer__contact">
           <img
             class="footer__logo"
             src="<%=require('./images/AUTO-MAGAZINE.svg')%>"
             alt="logo"
           />
           <p class="footer__copyright">© Auto-Magazine 2022</p>
-        </div> -->
+        </div>
       </footer>
     </main>
   </body>

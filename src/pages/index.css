@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   src: url(../vendor/fomts/SourceSansPro/SourceSansPro-Light.ttf) format("truetype");
   font-family: "Source Sans Pro";
@@ -31,6 +32,7 @@
   position: fixed;
   justify-content: space-between;
   background-color: #191d2c;
+  z-index: 2;
 }
 .header__logo {
   width: 184px;
@@ -99,6 +101,10 @@
   font-size: 19px;
   line-height: 28px;
   text-transform: uppercase;
+}
+.intro__image {
+  width: auto;
+  height: auto;
 }
 
 .about {
@@ -186,13 +192,44 @@
 }
 .gallary__components {
   display: flex;
-  margin-top: 50px;
+  margin-top: 590px;
 }
 .gallary__title {
   font-weight: 400;
   font-size: 46px;
   line-height: 46px;
   margin: 0 0 0 50px;
+}
+.gallary__image {
+  transition: visibility 0s, opacity 0.6s;
+  visibility: hidden;
+  position: absolute;
+  max-width: 719px;
+}
+.gallary__image_visible {
+  visibility: visible;
+  opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
+  transition: 1s; /*Скорость перехода состояния элемента*/
+  -webkit-animation: show 3s 1;
+          animation: show 3s 1; /* Указываем название анимации, её время и количество повторов*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+}
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .press {
@@ -263,8 +300,36 @@
   min-height: 316px;
   justify-content: space-between;
 }
+.footer__title {
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 46px;
+  margin: 50px 0 16px 0;
+}
+.footer__input-border {
+  border-right: 1px solid #E1FD2C;
+}
+.footer__signature-box {
+  padding-left: 50px;
+}
 .footer__signature {
-  min-height: 316px;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+}
+.footer__input-name-box {
+  border: 1px solid #E1FD2C;
+  width: 338px;
+  height: 32px;
+  display: flex;
+}
+.footer__input-mail-box {
+  border: 1px solid #E1FD2C;
+  border-top: none;
+  width: 338px;
+  height: 32px;
+  display: flex;
+  margin: 0 0 50px 0;
 }
 .footer__contact {
   display: flex;
@@ -288,22 +353,22 @@
 .footer__name-input {
   margin: 0;
   background-color: #191d2c;
-  border: 1px solid #E1FD2C;
-  width: 560px;
-  height: 111px;
+  border: none;
+  max-width: 177px;
+  height: 90%;
 }
 .footer__mail {
   margin: 0;
   background-color: #191d2c;
-  border: 1px solid #E1FD2C;
+  border: none;
   width: 560px;
-  height: 132px;
+  height: auto;
 }
-.footer__discribe {
+.footer__button-subscribe {
   margin: 0;
   background-color: #E1FD2C;
   color: #191d2c;
   border: 2px solid #E1FD2C;
   width: 80px;
-  height: 132px;
+  height: 100%;
 }/*# sourceMappingURL=index.css.map */

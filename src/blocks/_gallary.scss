@@ -25,7 +25,7 @@
   }
   &__components {
     display: flex;
-    margin-top: 50px;
+    margin-top: 590px;
   }
   &__title {
     font-weight: 400;
@@ -33,5 +33,25 @@
     line-height: 46px;
     margin: 0 0 0 50px;
   }
-  
+  &__image {
+    transition: visibility 0s, opacity 0.6s;
+    visibility: hidden;
+    position: absolute;
+    max-width: 719px;
+    &_visible {
+      visibility: visible;
+      opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
+      transition: 1s; /*Скорость перехода состояния элемента*/
+      animation: show 3s 1; /* Указываем название анимации, её время и количество повторов*/
+      animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    }
+    @keyframes show {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
 }

@@ -6,6 +6,7 @@
   position: fixed;
   justify-content: space-between;
   background-color: $primaryColor;
+  z-index: 2;
 
   &__logo {
     width: 184px;

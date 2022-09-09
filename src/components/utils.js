@@ -1,0 +1,9 @@
+export const pipironni = [1, 2, 3];
+export const buttonLeft = document.querySelector('#buttonLeft');
+export const buttonRight = document.querySelector('#buttonRight');
+export let currentSlide = 0;
+export const firstImage = document.querySelector("#firstImage");
+export const secondImage = document.querySelector("#secondImage");
+export const thirdImage = document.querySelector("#thirdImage");
+export const slides = [firstImage, secondImage, thirdImage];
+export const slideClassVisible = "gallary__image_visible"
