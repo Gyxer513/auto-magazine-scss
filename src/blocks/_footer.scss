@@ -26,6 +26,7 @@
     width: 338px;
     height: 32px;
     display: flex;
+    justify-content: space-around;
   }
 
   &__input-mail-box {
@@ -60,8 +61,11 @@
     margin: 0;
     background-color: $primaryColor;
     border: none;
-    max-width: 177px;
     height: 90%;
+    width: 80%;
+  }
+  &__name-input:first-child {
+    border-right: 1px solid $textColor;
   }
   &__mail {
     margin: 0;

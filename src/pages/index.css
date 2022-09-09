@@ -322,6 +322,7 @@
   width: 338px;
   height: 32px;
   display: flex;
+  justify-content: space-around;
 }
 .footer__input-mail-box {
   border: 1px solid #E1FD2C;
@@ -354,8 +355,11 @@
   margin: 0;
   background-color: #191d2c;
   border: none;
-  max-width: 177px;
   height: 90%;
+  width: 80%;
+}
+.footer__name-input:first-child {
+  border-right: 1px solid #E1FD2C;
 }
 .footer__mail {
   margin: 0;
