@@ -17,13 +17,18 @@
         </ul>
       </nav>
       <img
-        class="header__logo"
+        class="header__logo header__logo_visible"
         src="<%=require('./images/AUTO-MAGAZINE.svg')%>"
         alt="logo"
       />
-      <div class="header__burger-icon">
-        <div class="header__burger-border"></div>
+      <div class="header__burger-icon header__burger-icon_visible">
+        <div class="header__burger-border header__burger-border_visible"></div>
       </div>
+      <img
+        class="header__button-close"
+        src="<%=require('./images/CloseButton.svg')%>"
+        alt="Закрыть"
+      />
     </header>
     <main class="main">
       <!-- ******************** INTRO ******************** -->
@@ -93,10 +98,18 @@
             <h3 class="gallary__title">Галлерея</h3>
             <div>
               <button id="buttonLeft" class="gallary__button">
-                <img class="gallary__button-image" src="<%=require('./images/arrow-left.svg')%>" alt="" />
+                <img
+                  class="gallary__button-image"
+                  src="<%=require('./images/arrow-left.svg')%>"
+                  alt=""
+                />
               </button>
               <button id="buttonRight" class="gallary__button">
-                <img class="gallary__button-image" src="<%=require('./images/arrow-right.svg')%>" alt="" />
+                <img
+                  class="gallary__button-image"
+                  src="<%=require('./images/arrow-right.svg')%>"
+                  alt=""
+                />
               </button>
             </div>
           </div>
@@ -120,7 +133,7 @@
               <!-- <input class="press__ratio-box" type="radio" />
               <input class="press__ratio-box" type="radio" /> -->
             </div>
-            
+
             <button class="press__button">Читать</button>
           </div>
         </div>

@@ -12,3 +12,15 @@ export const gallaryLink = document.querySelector('#gallary');
 export const gallary = document.querySelector('.gallary');
 export const pressLink = document.querySelector('#press');
 export const press = document.querySelector('.press');
+export const burgerButton = document.querySelector('.header__burger-icon');
+export const burgerCloseButton = document.querySelector('.header__button-close');
+export const burgerButtonVisibleClass = "header__burger-icon_visible";
+export const burgerCloseButtonVisibleClass = "header__button-close_visible";
+export const navigationVisibleClass = "header__navigation_visible";
+export const logoVisibleClass = "header__logo_visible";
+export const burgerBorder = document.querySelector('header__burger-border');
+export const navigationMenu = document.querySelector('.header__navigation');
+export const headerLogo = document.querySelector('.header__logo');
+
+
+

@@ -10,10 +10,19 @@ import {
   gallaryLink,
   gallary,
   pressLink,
-  press
+  press,
+  burgerButton,
+  burgerCloseButton,
+  burgerButtonVisibleClass,
+  burgerCloseButtonVisibleClass,
+  navigationMenu,
+  navigationVisibleClass,
+  headerLogo,
+  logoVisibleClass,
 } from "../components/utils";
 import { Slider } from "../components/slaider";
 import { ScrollIntoView } from "../components/ScrollIntoView";
+import { BurgerMenu } from "../components/BurgerMenu";
 
 /* ******************** SLAIDER ********************  */
 
@@ -36,3 +45,17 @@ gallaryScroll.setEventListener();
 
 const pressScroll = new ScrollIntoView(pressLink, press);
 pressScroll.setEventListener();
+
+/* ******************** burgerMenu ********************  */
+
+const burgerMenu = new BurgerMenu(
+  navigationMenu,
+  burgerButton,
+  burgerCloseButton,
+  headerLogo,
+  burgerCloseButtonVisibleClass,
+  burgerButtonVisibleClass,
+  logoVisibleClass,
+  navigationVisibleClass
+);
+burgerMenu.addEventListeners();

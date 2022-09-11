@@ -17,12 +17,16 @@
   }
 
   &__logo {
+    display: none;
     width: 184px;
     height: 38px;
     align-self: center;
     margin-right: calc(720px - 92px);
     position: absolute;
     left: 628px;
+    &_visible {
+      display: block;
+    }
     @include tablet {
       margin-right: 0;
       left: 292px;
@@ -58,14 +62,23 @@
     @include tablet {
       display: none;
     }
+    &_visible {
+      display: flex;
+    }
   }
   &__burger-icon {
     display: none;
     width: 26px;
     height: 20px;
-    border-top: 2px solid $textColor;
-    border-bottom: 2px solid $textColor;
-    margin: 27px 34px 0;
+    border: none;
+    &_visible {
+      border-top: 2px solid $textColor;
+      border-bottom: 2px solid $textColor;
+      margin: 27px 34px 0;
+    }
+    &_close {
+      visibility: hidden;
+    }
     @include tablet {
       display: block;
     }
@@ -79,11 +92,27 @@
     cursor: pointer;
   }
   &__burger-border {
-    border-bottom: 2px solid $textColor;
-    margin: 8px 0 0 0;
+    border: none;
+    margin: 0;
     @include mobile {
       margin: 6px 0 0 0;
     }
+    &_visible {
+      border-bottom: 2px solid $textColor;
+      margin: 8px 0 0 0;
+    }
   }
-  
+  &__button-close {
+    width: 26px;
+    height: 26px;
+    display: none;
+    &_visible {
+      display: block;
+      margin: 25px 25px 0 0;
+    }
+  }
+  &__button-close:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
 }
