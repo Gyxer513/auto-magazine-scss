@@ -2,7 +2,10 @@
   min-height: 506px;
   border-bottom: 1px solid $textColor;
   display: flex;
-  
+  @include tablet {
+    display: block;
+  }
+
   &__title {
     font-weight: 300;
     font-size: 30px;
@@ -25,14 +28,30 @@
   }
 
   &__characteristics {
-    width: 359px;
+    min-width: 719px;
     margin: 0;
-    padding: 40px 0 0 0;
-    border-right: 1px solid #e1fd2c;
+    padding: 0;
+    display: flex;
   }
 
-  &characteristics:last-child {
-    border: none;
+  &__advantages {
+    border-right: 1px solid #e1fd2c;
+    padding: 40px 194px 0 0;
+    margin: 0;
+    @include tablet {
+      padding: 40px 0 0 0;
+      height: 505px;
+      min-width: 384px;
+    }
+  }
+  &__disadvantages {
+    padding: 40px 194px 0 0;
+    margin: 0;
+    @include tablet {
+      padding: 40px 0 0 0;
+      height: 505px;
+      min-width: 384px;
+    }
   }
 
   &__disadvantage {
@@ -50,15 +69,27 @@
 
   &__text {
     margin: 0;
-    width: 720px;
+    min-width: 720px;
     padding: 45px 50px 40px 50px;
     border-right: 1px solid #e1fd2c;
     font-weight: 300;
     font-size: 30px;
     line-height: 42px;
     box-sizing: border-box;
-    &__bold {
+    &_bold {
       font-weight: 500;
+    }
+    @include tablet {
+      border-right: none;
+      margin: 0;
+      padding: 45px 50px 40px 50px;
+      border-bottom: 1px solid #e1fd2c;
+      min-width: auto;
+    }
+    @include mobile {
+      font-size: 16px;
+      line-height: 27px;
+      padding: 20px;
     }
   }
 }

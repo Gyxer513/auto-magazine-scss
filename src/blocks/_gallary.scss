@@ -1,6 +1,12 @@
 .gallary {
   min-height: 687px;
   border-bottom: 1px solid $textColor;
+  @include tablet {
+    min-height: auto;
+  }
+  @include mobile {
+   height: 319px;
+  }
   &__box {
     display: flex;
     border-right: 1px solid #e1fd2c;
@@ -8,6 +14,17 @@
     flex-direction: column;
     max-width: 720px;
     min-height: 687px;
+    align-items: center;
+    @include tablet {
+      max-width: none;
+      border-right: none;
+      min-height: auto;
+    }
+    @include mobile {
+      max-width: none;
+      border-right: none;
+      min-height: auto;
+    }
   }
   &__button {
     width: 42px;
@@ -15,9 +32,13 @@
     background-color: transparent;
     border: none;
     margin: 0 30px 0px 250px;
+    @include mobile {
+      margin: 0 0px 0px 50px;
+    }
   }
+
   &__button:last-child {
-    margin-left: 0;
+    margin: 0 15px 0 0;
   }
   &__button:hover {
     cursor: pointer;
@@ -26,24 +47,49 @@
   &__components {
     display: flex;
     margin-top: 590px;
+    justify-content: space-between;
+    @include mobile {
+      margin-top: 250px;
+      justify-content: none;
+      line-height: 26px;
+    }
+  }
+  &__button-image {
+    width: 23px;
+    height: 23px;
   }
   &__title {
     font-weight: 400;
     font-size: 46px;
     line-height: 46px;
     margin: 0 0 0 50px;
+    @include mobile {
+      font-size: 26px;
+      line-height: 26px;
+      margin: 0 0 0 0px;
+    }
   }
   &__image {
     transition: visibility 0s, opacity 0.6s;
     visibility: hidden;
     position: absolute;
     max-width: 719px;
+    @include tablet {
+      max-width: 700px;
+      max-height: 510px;
+      margin: 35px 0 50px 0;
+    }
+    @include mobile {
+      max-width: 280px;
+      max-height: 204px;
+      margin: 20px 0 0 0;
+    }
     &_visible {
       visibility: visible;
-      opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
-      transition: 1s; /*Скорость перехода состояния элемента*/
-      animation: show 3s 1; /* Указываем название анимации, её время и количество повторов*/
-      animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+      opacity: 0;
+      transition: 1s;
+      animation: show 3s 1;
+      animation-fill-mode: forwards;
     }
     @keyframes show {
       0% {

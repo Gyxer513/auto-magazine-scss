@@ -4,12 +4,20 @@
   border-bottom: 1px solid $textColor;
   display: flex;
   justify-content: space-between;
+  @include tablet {
+    display: block;
+    height: auto;
+    min-width: auto;
+  }
 
   &__title {
     font-weight: 400;
     font-size: 46px;
     line-height: 46px;
     margin: 50px 0 0 50px;
+    @include tablet {
+      display: none;
+    }
   }
   &__link-box {
     border-left: 1px solid $textColor;
@@ -17,18 +25,26 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include tablet {
+      height: 499px;
+      border-left: none;
+      min-width: auto;
+    }
   }
   &__link {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 30px;
     line-height: 42px;
     max-width: 619px;
     margin: 50px 0 0 50px;
     text-decoration: none;
     color: $textColor;
+    &_bold {
+      font-weight: 400;
+    }
   }
   &__button {
-    width: 110px;;
+    width: 110px;
     height: 52px;
     border: 1px solid #e1fd2c;
     background-color: transparent;
@@ -50,14 +66,18 @@
     display: flex;
     align-items: flex-end;
   }
-  &__checkbox {
-    border: 1px solid #e1fd2c;
-    color: $textColor;
-    border-radius: 10%;
-    width: 1em;
-    height: 1em;
-    background-color: transparent;
-    margin: 0 5px 0;
-    padding: 0;
+  &__ratio-box {
+    border: 1px solid $textColor;
+    width: 12px;
+    height: 12px;
+    border-radius: 99px;
+    margin: 0 14px 0 0;
+  }
+  &__ratio-box-active {
+    background-color: $textColor;
+  }
+  &__ratio-box:hover {
+    cursor: pointer;
+    opacity: 0.6;
   }
 }

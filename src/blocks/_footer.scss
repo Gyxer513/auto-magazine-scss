@@ -2,6 +2,9 @@
   display: flex;
   min-height: 316px;
   justify-content: space-between;
+  @include tablet {
+    min-height: none;
+  }
   &__title {
     font-weight: 400;
     font-size: 46px;
@@ -45,6 +48,10 @@
     align-items: flex-end;
     border-left: 1px solid $textColor;
     min-width: 719px;
+    @include tablet {
+      min-width: auto;
+      border-left: none;
+    }
   }
   &__logo {
     width: 184px;
@@ -63,6 +70,16 @@
     border: none;
     height: 90%;
     width: 80%;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $textColor;
+  }
+  &__name-input::placeholder {
+    color: $textColor;
+    padding-left: 11px;
   }
   &__name-input:first-child {
     border-right: 1px solid $textColor;
@@ -73,6 +90,16 @@
     border: none;
     width: 560px;
     height: auto;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $textColor;
+  }
+  &__mail::placeholder {
+    color: $textColor;
+    padding-left: 11px;
   }
   &__button-subscribe {
     margin: 0;

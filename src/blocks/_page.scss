@@ -1,7 +1,13 @@
 .page {
     font-family: "Source Sans Pro", "Times New Roman", Times, serif;
     margin: 0 auto 0 auto;
-    max-width: 1440px;
+    max-width: $desctop;
     background-color: $primaryColor;
     color: $textColor;
+    @include tablet {
+      max-width: $tablet;
+    }
+    @include mobile {
+      width: $mobile;
+    }
   }/*# sourceMappingURL=project.css.map */

@@ -9,16 +9,21 @@
   <body class="page">
     <!-- ******************** HEADER ******************** -->
     <header class="header">
-      <nav class="header__navigation">
-        <a id="facts" class="header__link">ФАКТЫ</a>
-        <a id="gallary" class="header__link">ГАЛЕРЕЯ</a>
-        <a id="press" class="header__link">ПРЕССА</a>
+      <nav>
+        <ul class="header__navigation">
+          <li id="facts" class="header__link">ФАКТЫ</li>
+          <li id="gallary" class="header__link">ГАЛЕРЕЯ</li>
+          <li id="press" class="header__link">ПРЕССА</li>
+        </ul>
       </nav>
       <img
         class="header__logo"
         src="<%=require('./images/AUTO-MAGAZINE.svg')%>"
         alt="logo"
       />
+      <div class="header__burger-icon">
+        <div class="header__burger-border"></div>
+      </div>
     </header>
     <main class="main">
       <section class="intro">
@@ -26,13 +31,13 @@
           <p class="intro__name">VOLKSWAGEN T1</p>
           <h1 class="intro__title">Новая версия популярного микроавтобуса</h1>
           <p class="intro__signature">с электродвигателем</p>
-          <button class="intro__button">подробнее</button>
         </div>
         <img
           class="intro__image"
           src="<%=require('./images/MainPic.svg')%>"
           alt=""
         />
+        <button class="intro__button">подробнее</button>
       </section>
       <section class="about">
         <p class="about__text">
@@ -44,19 +49,21 @@
           электрокары и уже готовые машины будут продавать частным клиентам.
         </p>
         <div class="about__characteristics">
-          <h2 class="about__title">минусы</h2>
-          <ul>
-            <li class="about__advantage">Экологичный</li>
-            <li class="about__advantage">Экономный</li>
-            <li class="about__advantage">Тихий</li>
-          </ul>
-        </div>
-        <div class="about__characteristics">
-          <h2 class="about__title">плюсы</h2>
-          <ul>
-            <li class="about__disadvantage">Дорогой</li>
-            <li class="about__disadvantage">Подзарядка</li>
-          </ul>
+          <div class="about__advantages">
+            <h2 class="about__title">минусы</h2>
+            <ul>
+              <li class="about__advantage">Экологичный</li>
+              <li class="about__advantage">Экономный</li>
+              <li class="about__advantage">Тихий</li>
+            </ul>
+          </div>
+          <div class="about__disadvantages">
+            <h2 class="about__title">плюсы</h2>
+            <ul>
+              <li class="about__disadvantage">Дорогой</li>
+              <li class="about__disadvantage">Подзарядка</li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="gallary">
@@ -83,10 +90,10 @@
             <h3 class="gallary__title">Галлерея</h3>
             <div>
               <button id="buttonLeft" class="gallary__button">
-                <img src="<%=require('./images/arrow-left.svg')%>" alt="" />
+                <img class="gallary__button-image" src="<%=require('./images/arrow-left.svg')%>" alt="" />
               </button>
               <button id="buttonRight" class="gallary__button">
-                <img src="<%=require('./images/arrow-right.svg')%>" alt="" />
+                <img class="gallary__button-image" src="<%=require('./images/arrow-right.svg')%>" alt="" />
               </button>
             </div>
           </div>
@@ -95,14 +102,19 @@
       <section class="press">
         <h3 class="press__title">Пресса</h3>
         <div class="press__link-box">
-          <a class="press__link" href="#"
-            >Engadget: VW’s e-BULLI concept shows how your classic van can
-            become an EV.</a
+          <a
+            class="press__link"
+            href="https://www.engadget.com/2020-03-20-vw-unveils-e-bulli-t1-electric-conversion.html"
+            target="_blank"
+            ><span class="press__link_bold">Engadget:</span> VW’s e-BULLI
+            concept shows how your classic van can become an EV.</a
           >
           <div class="press__link-container">
             <div class="press__checkbox-container">
-              <input class="press__checkbox" type="radio" />
-              <input class="press__checkbox" type="radio" />
+              <div class="press__ratio-box press__ratio-box-active"></div>
+              <div class="press__ratio-box"></div>
+              <!-- <input class="press__ratio-box" type="radio" />
+              <input class="press__ratio-box" type="radio" /> -->
             </div>
             <button class="press__button">Читать</button>
           </div>
@@ -113,11 +125,29 @@
           <h4 class="footer__title">Подписка</h4>
           <p class="footer__signature">На новые спецвыпуски машин.</p>
           <div class="footer__input-name-box">
-              <input class="footer__name-input" type="text" />
-            <input class="footer__name-input" type="text" />
+            <input
+              class="footer__name-input"
+              type="text"
+              minlength="2"
+              maxlength="40"
+              placeholder="Имя"
+            />
+            <input
+              class="footer__name-input"
+              type="text"
+              minlength="2"
+              maxlength="40"
+              placeholder="Фамилия"
+            />
           </div>
           <div class="footer__input-mail-box">
-            <input class="footer__mail" type="email" />
+            <input
+              class="footer__mail"
+              type="email"
+              minlength="2"
+              maxlength="40"
+              placeholder="E-Mail"
+            />
             <button class="footer__button-subscribe">Подписка</button>
           </div>
         </div>
