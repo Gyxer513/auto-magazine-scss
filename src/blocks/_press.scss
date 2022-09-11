@@ -50,7 +50,11 @@
     background-color: transparent;
     color: $textColor;
     margin: 0 50px 50px 0;
-    border-radius: 180px;
+    border-radius: 100px/50px;
+    @include mobile {
+      width: 88px;
+      height: 42px;
+    }
   }
   &__button:hover {
     cursor: pointer;

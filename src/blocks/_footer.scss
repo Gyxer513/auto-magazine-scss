@@ -5,23 +5,38 @@
   @include tablet {
     min-height: none;
   }
+  @include mobile {
+    display: block;
+  }
   &__title {
     font-weight: 400;
     font-size: 46px;
     line-height: 46px;
     margin: 50px 0 16px 0;
+    @include mobile {
+      font-size: 26px;
+      line-height: 26px;
+      margin: 20px 0 14px 0;
+    }
   }
   &__input-border {
     border-right: 1px solid $textColor;
   }
   &__signature-box {
     padding-left: 50px;
+    @include mobile {
+      padding-left: 20px;
+    }
   }
 
   &__signature {
     font-weight: 400;
     font-size: 19px;
     line-height: 28px;
+    @include mobile {
+      font-size: 14px;
+      line-height: 14px;
+    }
   }
 
   &__input-name-box {
@@ -30,6 +45,9 @@
     height: 32px;
     display: flex;
     justify-content: space-around;
+    @include mobile {
+      width: 280px;
+    }
   }
 
   &__input-mail-box {
@@ -39,6 +57,9 @@
     height: 32px;
     display: flex;
     margin: 0 0 50px 0;
+    @include mobile {
+      width: 280px;
+    }
   }
 
   &__contact {
@@ -52,17 +73,30 @@
       min-width: auto;
       border-left: none;
     }
+    @include mobile {
+      align-items: center;
+    }
   }
   &__logo {
     width: 184px;
     height: 38px;
     margin: 50px 50px 0 0;
+    @include mobile {
+      width: 280px;
+      height: 58px;
+      margin: 120px 0 0 0;
+    }
   }
   &__copyright {
     font-weight: 400;
     font-size: 13px;
     line-height: 13px;
     margin: 0 50px 50px 0;
+    @include mobile {
+      width: 280px;
+      height: 58px;
+      margin: 20px 0 0 0;
+    }
   }
   &__name-input {
     margin: 0;
