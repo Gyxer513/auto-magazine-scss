@@ -481,13 +481,15 @@
 .gallary__components {
   display: flex;
   margin-top: 590px;
-  justify-content: space-between;
+  align-self: flex-start;
+  margin-left: 50px;
 }
 @media screen and (max-width: 768px) {
   .gallary__components {
     margin-top: 250px;
     justify-content: none;
     line-height: 26px;
+    justify-content: space-between;
   }
 }
 @media screen and (max-width: 768px) {
@@ -500,7 +502,7 @@
   font-weight: 400;
   font-size: 46px;
   line-height: 46px;
-  margin: 0 0 0 50px;
+  margin: 0;
 }
 @media screen and (max-width: 1440px) {
   .gallary__title {
@@ -511,7 +513,6 @@
   .gallary__title {
     font-size: 26px;
     line-height: 26px;
-    margin: 0 0 0 0;
   }
 }
 .gallary__image {
