@@ -67,17 +67,16 @@
     }
   }
   &__burger-icon {
+    visibility: hidden;
     display: none;
     width: 26px;
     height: 20px;
     border: none;
     &_visible {
+      visibility: inherit;
       border-top: 2px solid $textColor;
       border-bottom: 2px solid $textColor;
       margin: 27px 34px 0;
-    }
-    &_close {
-      visibility: hidden;
     }
     @include tablet {
       display: block;

@@ -110,18 +110,17 @@
   display: flex;
 }
 .header__burger-icon {
+  visibility: hidden;
   display: none;
   width: 26px;
   height: 20px;
   border: none;
 }
 .header__burger-icon_visible {
+  visibility: inherit;
   border-top: 2px solid #E1FD2C;
   border-bottom: 2px solid #E1FD2C;
   margin: 27px 34px 0;
-}
-.header__burger-icon_close {
-  visibility: hidden;
 }
 @media screen and (max-width: 1440px) {
   .header__burger-icon {

@@ -11,10 +11,10 @@ export class BurgerMenu {
   ) {
     this._navBlock = navBlock;
     this._burerButton = burerButton;
-    this.burgerButtonVisibleClass = burgerButtonVisibleClass;
     this._closeButton = closeButton;
     this._logo = logo;
     this._closeButtonVisibleClass = closeButtonVisibleClass;
+    this._burgerButtonVisibleClass = burgerButtonVisibleClass;
     this._logoVisibleClass = logoVisibleClass;
     this._menuVisibleClass = menuVisibleClass;
   }
