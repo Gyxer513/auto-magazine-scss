@@ -24,7 +24,6 @@
 
   &__button {
     width: 360px;
-    height: 64px;
     border: 1px solid $textColor;
     background-color: transparent;
     font-size: 15px;
@@ -87,8 +86,10 @@
     }
   }
   &__image {
-    width: auto;
-    height: auto;
+    object-fit: fill;
+    object-position: 50% 50%;
+    max-width: 720px;
+    max-height: 540px;
     @include tablet {
       width: 700px;
       height: 510px;

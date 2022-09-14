@@ -1,6 +1,6 @@
 .header {
   width: $desctop;
-  height: 70px;
+  height: auto;
   border-bottom: 1px solid $textColor;
   display: flex;
   position: fixed;
@@ -10,10 +10,11 @@
 
   @include tablet {
     width: $tablet;
+    justify-content: space-between;
   }
   @include mobile {
     width: $mobile;
-    justify-content: none;
+    justify-content: space-between;
   }
 
   &__logo {
@@ -28,7 +29,7 @@
       display: block;
     }
     @include tablet {
-      margin-right: 0;
+      margin: 0;
       left: 292px;
     }
     @include mobile {
@@ -40,6 +41,8 @@
   }
 
   &__link {
+    color: $textColor;
+    letter-spacing: 1px;
     margin: 0 20px 0 0;
     text-decoration: none;
     font-size: 12px;
@@ -60,13 +63,15 @@
     display: flex;
     padding: 0;
     @include tablet {
-      display: none;
+      visibility: hidden;
     }
     &_visible {
+      visibility: visible;
       display: flex;
     }
   }
   &__burger-icon {
+    justify-self: end;
     visibility: hidden;
     display: none;
     width: 26px;
@@ -76,7 +81,7 @@
       visibility: inherit;
       border-top: 2px solid $textColor;
       border-bottom: 2px solid $textColor;
-      margin: 27px 34px 0;
+      margin: 25px 34px 23px 0;
     }
     @include tablet {
       display: block;

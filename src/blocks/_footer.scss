@@ -99,6 +99,7 @@
     }
   }
   &__name-input {
+    all: unset;
     margin: 0;
     background-color: $primaryColor;
     border: none;
@@ -142,5 +143,8 @@
     border: 2px solid $textColor;
     width: 80px;
     height: 100%;
+  }
+  &__button-subscribe:hover {
+    cursor: pointer;
   }
 }

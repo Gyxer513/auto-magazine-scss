@@ -21,6 +21,11 @@ export const logoVisibleClass = "header__logo_visible";
 export const burgerBorder = document.querySelector('header__burger-border');
 export const navigationMenu = document.querySelector('.header__navigation');
 export const headerLogo = document.querySelector('.header__logo');
+export const inputName = document.querySelector('#name');
+export const inputSurname = document.querySelector('#surname');
+export const inputMail = document.querySelector('#mail');
+export const formButton = document.querySelector('#formButton')
+
 
 
 
