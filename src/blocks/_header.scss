@@ -98,12 +98,12 @@
   &__burger-border {
     border: none;
     margin: 0;
-    @include mobile {
-      margin: 6px 0 0 0;
-    }
     &_visible {
       border-bottom: 2px solid $textColor;
       margin: 8px 0 0 0;
+      @include mobile {
+        margin: 7px 0 0 0;
+      }
     }
   }
   &__button-close {

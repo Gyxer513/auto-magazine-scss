@@ -26,6 +26,7 @@
     width: 360px;
     border: 1px solid $textColor;
     background-color: transparent;
+    font-weight: 400;
     font-size: 15px;
     line-height: 60px;
     letter-spacing: 1px;
@@ -56,7 +57,7 @@
     text-align: center;
     margin: 180px 0 0 80px;
     @include tablet {
-      margin: 99px auto 0 auto;
+      margin: 100px auto 0 auto;
     }
     @include mobile {
       margin: 60px auto 0 auto;
@@ -90,6 +91,7 @@
     object-position: 50% 50%;
     max-width: 720px;
     max-height: 540px;
+    margin-top: 150px;
     @include tablet {
       width: 700px;
       height: 510px;

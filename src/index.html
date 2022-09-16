@@ -55,16 +55,16 @@
         </p>
         <div class="about__characteristics">
           <div class="about__advantages">
-            <p class="about__title">минусы</p>
-            <ul>
+            <p class="about__title">плюсы</p>
+            <ul class="about__list">
               <li class="about__advantage">Экологичный</li>
               <li class="about__advantage">Экономный</li>
               <li class="about__advantage">Тихий</li>
             </ul>
           </div>
           <div class="about__disadvantages">
-            <p class="about__title">плюсы</p>
-            <ul>
+            <p class="about__title">минусы</p>
+            <ul class="about__list">
               <li class="about__disadvantage">Дорогой</li>
               <li class="about__disadvantage">Подзарядка</li>
             </ul>
@@ -140,12 +140,13 @@
       </section>
       <!-- ******************** FOOTER ******************** -->
       <footer class="footer">
-        <form class="footer__signature-box">
+        <form name="subscribe" class="footer__signature-box">
           <h2 class="footer__title">Подписка</h2>
           <p class="footer__signature">На новые спецвыпуски машин.</p>
           <div class="footer__input-name-box">
             <input
             id="name"
+            name="name"
               class="footer__name-input"
               type="text"
               minlength="2"
@@ -153,6 +154,7 @@
               placeholder="Имя"
             />
             <input
+            name="surname"
             id="surname"
               class="footer__name-input"
               type="text"
@@ -163,6 +165,7 @@
           </div>
           <div class="footer__input-mail-box">
             <input
+            name="mail"
             id="mail"
               class="footer__mail"
               type="email"

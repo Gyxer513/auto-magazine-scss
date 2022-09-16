@@ -33,9 +33,10 @@
     font-weight: 400;
     font-size: 19px;
     line-height: 28px;
+    margin-bottom: 64px;
     @include mobile {
       font-size: 14px;
-      line-height: 14px;
+      margin-bottom: 60px;
     }
   }
 
@@ -95,7 +96,7 @@
     @include mobile {
       width: 280px;
       height: 58px;
-      margin: 20px 0 0 0;
+      margin: 20px 0 0 20px;
     }
   }
   &__name-input {

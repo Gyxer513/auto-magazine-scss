@@ -1,29 +1,17 @@
 .gallary {
-  min-height: 687px;
   border-bottom: 1px solid $textColor;
-  @include tablet {
-    min-height: auto;
-  }
-  @include mobile {
-   height: 319px;
-  }
+ 
   &__box {
     display: flex;
     border-right: 1px solid #e1fd2c;
     box-sizing: border-box;
     flex-direction: column;
     max-width: 720px;
-    min-height: 687px;
+   
     align-items: center;
     @include tablet {
       max-width: none;
       border-right: none;
-      min-height: auto;
-    }
-    @include mobile {
-      max-width: none;
-      border-right: none;
-      min-height: auto;
     }
   }
   &__button {
@@ -66,13 +54,14 @@
     font-weight: 400;
     font-size: 46px;
     line-height: 46px;
-    margin: 0;
+    margin: 0 0 50px 0;
     @include tablet {
       margin-bottom: 50px;
     }
     @include mobile {
       font-size: 26px;
       line-height: 26px;
+      margin: 0 0 20px 0;
     }
   }
   &__image {
