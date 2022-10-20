@@ -3,20 +3,49 @@
   min-height: 840px;
   border-bottom: 1px solid $textColor;
   justify-content: space-between;
+  text-align: center;
+  @include tablet {
+    display: block;
+  }
+  @include mobile {
+    min-height: auto;
+  }
   &__name {
+    font-weight: 400;
     font-size: 19px;
     line-height: 28px;
+    margin: 0;
+    text-transform: uppercase;
+    @include mobile {
+      font-size: 11px;
+      line-height: 14px;
+    }
   }
+
   &__button {
     width: 360px;
-    height: 64px;
     border: 1px solid $textColor;
     background-color: transparent;
+    font-weight: 400;
     font-size: 15px;
     line-height: 60px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $textColor;
+    position: absolute;
+    top: 596px;
+    margin-left: 180px;
+
+    @include tablet {
+      position: sticky;
+      margin: 0 0 102px 0;
+    }
+    @include mobile {
+      width: 280px;
+      height: 64px;
+      margin: 0 auto 60px auto;
+      top: 0;
+    }
   }
   &__button:hover {
     cursor: pointer;
@@ -27,19 +56,51 @@
     max-width: 550px;
     text-align: center;
     margin: 180px 0 0 80px;
+    @include tablet {
+      margin: 100px auto 0 auto;
+    }
+    @include mobile {
+      margin: 60px auto 0 auto;
+    }
   }
   &__title {
     font-size: 65px;
     line-height: 73px;
     font-weight: 400;
+    margin: 0;
+    @include mobile {
+      font-size: 11px;
+      line-height: 14px;
+      font-size: 38px;
+      line-height: 50px;
+    }
   }
   &__signature {
+    margin: 50px 0 0 0;
     font-size: 19px;
     line-height: 28px;
     text-transform: uppercase;
+    @include mobile {
+      margin: 30px 0 0 0;
+      font-size: 11px;
+      line-height: 14px;
+    }
   }
   &__image {
-    width: auto;
-    height: auto;
+    object-fit: fill;
+    object-position: 50% 50%;
+    max-width: 720px;
+    max-height: 540px;
+    margin-top: 150px;
+    @include tablet {
+      width: 700px;
+      height: 510px;
+      margin: 100px auto 102px auto;
+    }
+    @include mobile {
+      width: 280px;
+      height: 202px;
+      margin: 60px auto 62px auto;
+    }
   }
 }

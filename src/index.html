@@ -10,33 +10,43 @@
     <!-- ******************** HEADER ******************** -->
     <header class="header">
       <nav class="header__navigation">
-        <a class="header__link">ФАКТЫ</a>
-        <a class="header__link">ГАЛЕРЕЯ</a>
-        <a class="header__link">ПРЕССА</a>
+          <a id="facts" class="header__link" href="##">ФАКТЫ</a>
+          <a id="gallary" class="header__link" href="##">ГАЛЛЕРЕЯ</a>
+          <a id="press" class="header__link" href="##">ПРЕССА</a>
       </nav>
       <img
-        class="header__logo"
+        class="header__logo header__logo_visible"
         src="<%=require('./images/AUTO-MAGAZINE.svg')%>"
-        alt="logo"
+        alt="Лого"
+      />
+      <div class="header__burger-icon header__burger-icon_visible">
+        <div class="header__burger-border header__burger-border_visible"></div>
+      </div>
+      <img
+        class="header__button-close"
+        src="<%=require('./images/CloseButton.svg')%>"
+        alt="Закрыть"
       />
     </header>
     <main class="main">
+      <!-- ******************** INTRO ******************** -->
       <section class="intro">
         <div class="intro__info">
           <p class="intro__name">VOLKSWAGEN T1</p>
           <h1 class="intro__title">Новая версия популярного микроавтобуса</h1>
           <p class="intro__signature">с электродвигателем</p>
-          <button class="intro__button">подробнее</button>
         </div>
         <img
           class="intro__image"
-          src="<%=require('./images/MainPic.svg')%>"
-          alt=""
+          src="<%=require('./images/MainPic.png')%>"
+          alt="Главная картинка"
         />
+        <button class="intro__button" type="button">подробнее</button>
       </section>
+      <!-- ******************** ABOUT ******************** -->
       <section class="about">
         <p class="about__text">
-          <span class="about__text_bold">VW T1 Electro:</span> Отделение
+          <span class="about__text-bold" >VW T1 Electro:</span> Отделение
           Volkswagen Commercial Vehicles представило концепт e-Bulli:
           классический вэн T1 1966 года с электрической силовой установкой. По
           словам производителя, проект получит коммерческое продолжение, и через
@@ -44,90 +54,133 @@
           электрокары и уже готовые машины будут продавать частным клиентам.
         </p>
         <div class="about__characteristics">
-          <h2 class="about__title">минусы</h2>
-          <ul>
-            <li class="about__advantage">Экологичный</li>
-            <li class="about__advantage">Экономный</li>
-            <li class="about__advantage">Тихий</li>
-          </ul>
-        </div>
-        <div class="about__characteristics">
-          <h2 class="about__title">плюсы</h2>
-          <ul>
-            <li class="about__disadvantage">Дорогой</li>
-            <li class="about__disadvantage">Подзарядка</li>
-          </ul>
+          <div class="about__advantages">
+            <p class="about__title">плюсы</p>
+            <ul class="about__list">
+              <li class="about__advantage">Экологичный</li>
+              <li class="about__advantage">Экономный</li>
+              <li class="about__advantage">Тихий</li>
+            </ul>
+          </div>
+          <div class="about__disadvantages">
+            <p class="about__title">минусы</p>
+            <ul class="about__list">
+              <li class="about__disadvantage">Дорогой</li>
+              <li class="about__disadvantage">Подзарядка</li>
+            </ul>
+          </div>
         </div>
       </section>
+      <!-- ******************** GALLARY ******************** -->
       <section class="gallary">
         <div class="gallary__box">
           <img
             id="firstImage"
             class="gallary__image gallary__image_visible"
-            src="<%=require('./images/Slaider-pic1.svg')%>"
+            src="<%=require('./images/Slaider-pic1.png')%>"
             alt="Картинка"
           />
           <img
             id="secondImage"
             class="gallary__image"
-            src="<%=require('./images/Slaider-pic2.svg')%>"
+            src="<%=require('./images/Slaider-pic2.png')%>"
             alt="Картинка"
           />
           <img
             id="thirdImage"
             class="gallary__image"
-            src="<%=require('./images/Slaider-pic3.svg')%>"
+            src="<%=require('./images/Slaider-pic3.jpg')%>"
             alt="Картинка"
           />
           <div class="gallary__components">
-            <h3 class="gallary__title">Галлерея</h3>
+            <h2 class="gallary__title">Галлерея</h2>
             <div>
-              <button id="buttonLeft" class="gallary__button">
-                <img src="<%=require('./images/arrow-left.svg')%>" alt="" />
+              <button id="buttonLeft" class="gallary__button" type="button">
+                <img
+                  class="gallary__button-image"
+                  src="<%=require('./images/arrow-left.svg')%>"
+                  alt="Кнопка влево"
+                />
               </button>
-              <button id="buttonRight" class="gallary__button">
-                <img src="<%=require('./images/arrow-right.svg')%>" alt="" />
+              <button id="buttonRight" class="gallary__button" type="button">
+                <img
+                  class="gallary__button-image"
+                  src="<%=require('./images/arrow-right.svg')%>"
+                  alt="Кнопка вправо"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
+      <!-- ******************** PRESS ******************** -->
       <section class="press">
-        <h3 class="press__title">Пресса</h3>
+        <h2 class="press__title">Пресса</h2>
         <div class="press__link-box">
-          <a class="press__link" href="#"
-            >Engadget: VW’s e-BULLI concept shows how your classic van can
-            become an EV.</a
+          <a
+            class="press__link"
+            href="https://www.engadget.com/2020-03-20-vw-unveils-e-bulli-t1-electric-conversion.html"
+            > <span class="press__link_bold">Engadget:</span
+              > VW’s e-BULLI concept shows how your classic van can become an
+            EV.</a
           >
           <div class="press__link-container">
             <div class="press__checkbox-container">
-              <input class="press__checkbox" type="radio" />
-              <input class="press__checkbox" type="radio" />
+              <div
+                id="radioOne"
+                class="press__ratio-box press__ratio-box-active"
+              ></div>
+              <div id="radioTwo" class="press__ratio-box"></div>
+              <!-- <input class="press__ratio-box" type="radio" />
+              <input class="press__ratio-box" type="radio" /> -->
             </div>
-            <button class="press__button">Читать</button>
+            <button class="press__button" type="button">Читать</button>
           </div>
         </div>
       </section>
+      <!-- ******************** FOOTER ******************** -->
       <footer class="footer">
-        <div class="footer__signature-box">
-          <h4 class="footer__title">Подписка</h4>
+        <form name="subscribe" class="footer__signature-box">
+          <h2 class="footer__title">Подписка</h2>
           <p class="footer__signature">На новые спецвыпуски машин.</p>
           <div class="footer__input-name-box">
-            <div class="footer__input-border">
-              <input class="footer__name-input" type="text" />
-            </div>
-            <input class="footer__name-input" type="text" />
+            <input
+            id="name"
+            name="name"
+              class="footer__name-input"
+              type="text"
+              minlength="2"
+              maxlength="40"
+              placeholder="Имя"
+            />
+            <input
+            name="surname"
+            id="surname"
+              class="footer__name-input"
+              type="text"
+              minlength="2"
+              maxlength="40"
+              placeholder="Фамилия"
+            />
           </div>
           <div class="footer__input-mail-box">
-            <input class="footer__mail" type="email" />
-            <button class="footer__button-subscribe">Подписка</button>
+            <input
+            name="mail"
+            id="mail"
+              class="footer__mail"
+              type="email"
+              minlength="2"
+              maxlength="40"
+              placeholder="E-Mail"
+            />
+            <button id="formButton" class="footer__button-subscribe" type="submit">Подписка</button>
           </div>
-        </div>
+        </form>
         <div class="footer__contact">
           <img
             class="footer__logo"
             src="<%=require('./images/AUTO-MAGAZINE.svg')%>"
-            alt="logo"
+            alt="Лого"
           />
           <p class="footer__copyright">© Auto-Magazine 2022</p>
         </div>

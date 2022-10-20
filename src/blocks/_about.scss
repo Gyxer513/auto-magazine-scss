@@ -2,13 +2,19 @@
   min-height: 506px;
   border-bottom: 1px solid $textColor;
   display: flex;
-  
+  @include tablet {
+    display: block;
+  }
+
   &__title {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 30px;
     line-height: 37px;
     letter-spacing: 2px;
     margin: 0 0 50px 50px;
+    @include mobile {
+      margin: 20px 0 40px 20px;
+    }
   }
 
   &__advantage {
@@ -25,14 +31,39 @@
   }
 
   &__characteristics {
-    width: 359px;
     margin: 0;
-    padding: 40px 0 0 0;
-    border-right: 1px solid #e1fd2c;
+    padding: 0;
+    display: flex;
+    @include mobile {
+      flex-direction: column-reverse;
+      min-width: auto;
+    }
   }
 
-  &characteristics:last-child {
-    border: none;
+  &__advantages {
+    border-right: 1px solid #e1fd2c;
+    padding: 40px 194px 0 0;
+    @include tablet {
+      padding: 40px 0 278px 0;
+      min-width: 384px;
+    }
+    @include mobile {
+      padding: 0;
+      border-right: none;
+    }
+  }
+  &__disadvantages {
+    padding: 40px 0 0 0;
+    margin: 0;
+    @include tablet {
+      padding: 40px 0 0 0;
+      min-width: 384px;
+    }
+    @include mobile {
+      padding: 0;
+      border-bottom: 1px solid #e1fd2c;
+      min-width: auto;
+    }
   }
 
   &__disadvantage {
@@ -49,16 +80,35 @@
   }
 
   &__text {
+    max-width: 720px;
     margin: 0;
-    width: 720px;
     padding: 45px 50px 40px 50px;
     border-right: 1px solid #e1fd2c;
     font-weight: 300;
     font-size: 30px;
     line-height: 42px;
     box-sizing: border-box;
-    &__bold {
-      font-weight: 500;
+
+    @include tablet {
+      border-right: none;
+      border-bottom: 1px solid #e1fd2c;
+      min-width: auto;
+    }
+    @include mobile {
+      font-size: 16px;
+      line-height: 27px;
+      padding: 20px;
+    }
+  }
+
+  &__text-bold {
+    font-weight: 500;
+  }
+  &__list {
+    margin: 0 0 0 50px;
+    padding: 0;
+    @include mobile {
+      margin: 0 0 20px 20px;
     }
   }
 }
