@@ -113,10 +113,12 @@
     text-transform: uppercase;
     color: $textColor;
   }
+  
   &__name-input::placeholder {
     color: $textColor;
     padding-left: 11px;
   }
+
   &__name-input:first-child {
     border-right: 1px solid $textColor;
   }
